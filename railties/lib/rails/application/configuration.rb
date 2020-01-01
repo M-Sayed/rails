@@ -12,7 +12,7 @@ module Rails
                     :force_ssl, :helpers_paths, :logger, :log_tags, :preload_frameworks,
                     :railties_order, :relative_url_root, :reload_plugins, :secret_token,
                     :serve_static_assets, :ssl_options, :static_cache_control, :session_options,
-                    :time_zone, :reload_classes_only_on_change, :whiny_nils
+                    :time_zone, :reload_classes_only_on_change, :whiny_nils, :rake_eager_load
 
       attr_writer :log_level
       attr_reader :encoding

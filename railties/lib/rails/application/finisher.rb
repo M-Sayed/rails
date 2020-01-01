@@ -48,7 +48,7 @@ module Rails
       end
 
       initializer :eager_load! do
-        if config.cache_classes && !(defined?($rails_rake_task) && $rails_rake_task)
+        if config.cache_classes && (config.rake_eager_load || !(defined?($rails_rake_task) && $rails_rake_task))
           ActiveSupport.run_load_hooks(:before_eager_load, self)
           eager_load!
         end
